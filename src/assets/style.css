@@ -1,0 +1,95 @@
+
+.gmap-menu-button {
+    position: fixed;
+    left: 22px;
+    top: 26px;
+    background: no-repeat;
+    z-index: 1;
+    color: #427feb;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    font-size: 40px;
+}
+.trader-info {
+  position: absolute;
+      background: #fff;
+      padding: 10px;
+      bottom: -60px;
+      width: 90%;
+      margin-left: 1.5em;
+}
+.welcome-info{
+  position: absolute;
+  background: #066eef;
+  color: #fff;
+  padding: 10px;
+  bottom: -76px;
+  width: 90%;
+  margin-left: 1.5em;
+}
+.mapinfo {
+  position: fixed;
+}
+.gmap-current-location{
+  font-size: 2.2em;
+  position:fixed;
+  z-index:1;
+  margin-top: 621px;
+  margin-left: 454px;
+  background-color: #fff;
+}
+.gmap-search-input {
+  padding: 13px;
+  position: fixed;
+  z-index: 1;
+  width: 68%;
+  right: 58px;
+  top: 35px;
+  min-height: 0;
+  border: none;
+  box-shadow: 4px 5px 15px #7b7777;
+  border-radius: 39px;
+}
+.outer-content .scroll-content{
+  margin-top: 118px !important;
+      background: #0c83ce;
+}
+.toolbar-background{
+    background: #3b4354 !important;
+}
+.sidemenu-item{
+  background: none;
+  border-bottom: none !important;
+  border-top: none !important;
+  color: #fff;
+  font-size: 1.7em;
+}
+.toolbar-title{
+  text-align: center !important;
+  color: #fff;
+}
+.brand-logo{
+
+    width: 46%;
+}
+.login-input{
+  margin: 5px 0;
+  border: 1px solid #dfe0e0;
+  border-radius: 6px;
+}
+.form-input-fields{
+  width: 80%;
+margin-left: auto;
+margin-right: auto;
+}
+.form-input-fields input{
+  padding: 0 10px;
+  font-size: 14px;
+}
+.form-input-fields ion-item{
+  padding: 0 0 0 5px;
+}
+.padding0{
+  padding: 0 !important;
+}

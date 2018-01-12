@@ -1,0 +1,50 @@
+
+
+<ion-content>
+	<div  text-center style=" margin-top: 26px;">
+		<img src="assets/img/wireme-logo.png" alt="Ionic logo" class="brand-logo">
+	</div>
+	<ion-row class="logo" text-center>
+		 <ion-col col-12 style="    font-size: 2em;    margin-top: 38px;    color: #3896ea;"><ion-icon name="contact" class="icon-chat-user"></ion-icon></ion-col>
+		 <ion-col col-12><h3 style="color: #3896ea;"><strong>Sign In</strong></h3></ion-col>
+	</ion-row>
+	<form #loginForm="ngForm" novalidate>
+		<ion-list no-lines class="form-input-fields">
+			<ion-item>
+				<ion-input [(ngModel)]="loginDetail.email" placeholder="enter emailid" name="email" type="text" #email="ngModel" spellcheck="false" autocapitalize="off" class="login-input"
+					required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>
+				email is required
+			</p>
+
+			<ion-item>
+				<ion-input [(ngModel)]="loginDetail.password" placeholder="enter password" name="password" type="password" #password="ngModel" required class="login-input" >
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+				Password is required
+			</p>
+			<ion-row>
+				<ion-col text-right>
+			      <a style="font-size: 0.8em; color: #bdbdbd;" (click)="forgotPassword()">Forgot password?</a>
+			    </ion-col>
+			</ion-row>
+			<ion-row responsive-sm>
+				<ion-col >
+					<button style="background-color: #3996ea;" ion-button (click)="onlogin1(loginForm)" type="submit" block>Login</button>
+				</ion-col>
+			</ion-row>
+			<hr>
+			<ion-row>
+				<ion-col text-center  style="font-size: 0.8em; color: #bdbdbd;">
+					Not a member? <a (click)="onSignup()">Create an account</a>
+				</ion-col>
+			</ion-row>
+		</ion-list>
+
+
+	</form>
+
+</ion-content>

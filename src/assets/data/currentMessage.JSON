@@ -1,0 +1,14 @@
+{
+	"message": "message has been sent",
+	"statusCode": 200,
+	"data": {
+		"sender": "pankajjoshi115@gmail.com",
+		"recipient": "Kasif@gmail.com",
+		"content": "hello",
+		"chatId": "1",
+		"isRead": false,
+		"createdAt": "2017-12-30T11:06:43.632Z",
+		"updatedAt": "2017-12-30T11:06:43.632Z",
+		"messageId": 53
+	}
+}

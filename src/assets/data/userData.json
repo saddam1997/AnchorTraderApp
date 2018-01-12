@@ -1,0 +1,49 @@
+[{
+    "name":"Pankaj", 
+    "email":"pankaj@gmail.com", 
+    "id":1,
+    "lattitude":28.412023,
+    "longitude":77.043182,
+    "status":"buy"
+},
+{
+    "name":"Saddam", 
+    "email":"saddam@gmail.com", 
+    "id":2,
+    "lattitude":28.412089,
+    "longitude":77.044380,
+    "status":"sell"
+},
+{
+    "name":"Subham", 
+    "email":"subham@gmail.com", 
+    "id":3,
+    "lattitude":28.413316,
+    "longitude":77.044165,
+    "status":"buy"
+},
+{
+    "name":"Ankit", 
+    "email":"ankit@gmail.com", 
+    "id":4,
+    "lattitude":28.413448,
+    "longitude":77.043693,
+    "status":"sell"
+},
+{
+    "name":"Sikha", 
+    "email":"sikha@gmail.com", 
+    "id":5,
+    "lattitude":28.413316,
+    "longitude":77.041633,
+    "status":"buy"
+},
+{
+    "name":"Kasif", 
+    "email":"kasif@gmail.com", 
+    "id":6,
+    "lattitude":28.414090,
+    "longitude":77.042228,
+    "status":"sell"
+}
+]

@@ -1,0 +1,80 @@
+{
+	"statusCode": 200,
+	"message": "chat retrieved successfully",
+	"data": [
+		{
+			"messageId": 1,
+			"chatId": "1",
+			"content": "hello",
+			"sender": "pankajjoshi115@gmail.com",
+			"recipient": "Kasif@gmail.com",
+			"isRead": false,
+			"createdAt": "2017-12-29T13:06:39.000Z",
+			"updatedAt": "2017-12-29T13:06:39.000Z"
+		},
+		{
+			"messageId": 2,
+			"chatId": "1",
+			"content": "hello",
+			"sender": "Kasif@gmail.com",
+			"recipient": "pankajjoshi115@gmail.com",
+			"isRead": false,
+			"createdAt": "2017-12-29T13:08:38.000Z",
+			"updatedAt": "2017-12-29T13:08:38.000Z"
+		},
+		
+		
+		
+		{
+			"messageId": 3,
+			"chatId": "1",
+			"content": "how are you",
+			"sender": "pankajjoshi115@gmail.com",
+			"recipient": "Kasif@gmail.com",
+			"isRead": false,
+			"createdAt": "2017-12-30T09:26:48.000Z",
+			"updatedAt": "2017-12-30T09:26:48.000Z"
+		},
+		{
+			"messageId": 4,
+			"chatId": "1",
+			"content": "i f9",
+			"sender": "Kasif@gmail.com",
+			"recipient": "pankajjoshi115@gmail.com",
+			"isRead": false,
+			"createdAt": "2017-12-30T09:26:57.000Z",
+			"updatedAt": "2017-12-30T09:26:57.000Z"
+		},
+		
+		{
+			"messageId": 5,
+			"chatId": "1",
+			"content": "and you",
+			"sender": "Kasif@gmail.com",
+			"recipient": "pankajjoshi115@gmail.com",
+			"isRead": false,
+			"createdAt": "2017-12-30T09:31:10.000Z",
+			"updatedAt": "2017-12-30T09:31:10.000Z"
+		},
+		{
+			"messageId": 6,
+			"chatId": "1",
+			"content": "i also f9",
+			"sender": "pankajjoshi115@gmail.com",
+			"recipient": "Kasif@gmail.com",
+			"isRead": false,
+			"createdAt": "2017-12-30T09:33:37.000Z",
+			"updatedAt": "2017-12-30T09:33:37.000Z"
+		},
+		{
+			"messageId": 7,
+			"chatId": "1",
+			"content": "happy new year",
+			"sender": "Kasif@gmail.com",
+			"recipient": "pankajjoshi115@gmail.com",
+			"isRead": false,
+			"createdAt": "2017-12-30T09:33:37.000Z",
+			"updatedAt": "2017-12-30T09:33:37.000Z"
+		}
+	]
+}

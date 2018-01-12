@@ -1,0 +1,48 @@
+
+
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Trader List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<!-- <div *ngFor="let friend of friendList" class="row chat-all">	
+	<div class="col-10" *ngIf="friend.isAccepted === true">
+		 <span class="chat-user" (click)="openChat(friend.sender,friend.receiver,friend.chatId)">{{friend.receiver}}</span>
+	</div> 
+</div> -->
+<!-- <div *ngFor="let friend of friendList" class="row chat-all">
+	<div class="col-12" *ngIf="friend.isAccepted === false ">
+		 <span class="chat-user" >{{friend.receiver}}</span>
+  </div>&nbsp;
+		 <div class="col-10" *ngIf="friend.isAccepted === false ">	
+		 	<button style="background-color: #3996ea;" ion-button  type="submit" block>Accept</button>
+		 	</div>	&nbsp;
+		    <div class="col-8" *ngIf="friend.isAccepted === false ">	
+		 	 <button style="background-color: #3996ea;" ion-button  type="submit" block>Accept</button>
+		 	</div>	
+	
+</div> -->
+
+
+<div *ngFor="let friend of friendList" class="row chat-all">
+	<div class="col-12" *ngIf="friend.isAccepted === true">
+		 <span class="chat-user" (click)="openChat(friend.sender,friend.receiver,friend.chatId)">{{friend.receiver}}</span>
+  </div>&nbsp;
+	  <div *ngIf="friend.isAccepted === false"  class="row ">
+	  	<div class="col-sm-9">
+	     	<span class="chat-user">{{friend.receiver}}</span>
+	  	</div>
+			 	<div class="col col-6"><button style="background-color: #3996ea;" ion-button  type="submit"  (click)="acceptRequestByTrader()" block>Accept</button>
+			 	</div>
+			 	<div  class="col col-6">
+			 	 <button style="background-color: #3996ea;" ion-button  type="submit" (click)="rejectRequestByTrader()"  block>Reject</button></div>
+	
+	</div>
+</div>
+</ion-content>

@@ -1,0 +1,33 @@
+<!--
+  Generated template for the SettingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+  	 <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div padding-top text-center >
+    <img src="http://www.gravatar.com/avatar?d=mm&s=140" alt="avatar">
+
+    <ion-list inset>   	 
+          
+          <span style="margin-right: 259px !important;" > Account verify</span>
+          <br>pankajjoshi115@gmail.com
+          <span (click)="veryfyEmail(user)" class="pull-left red-text" *ngIf="verifyEmail==false"> Not Verified</span>
+          <span class="pull-right green-text" *ngIf="verifyEmail==true"> Verified</span><hr>        
+          <button ion-item (click)="changeCurrentPassword()">Change Password</button><hr>  
+ 
+    </ion-list>
+  </div>
+</ion-content>

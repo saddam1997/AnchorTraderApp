@@ -1,0 +1,15 @@
+<ion-content no-bounce>
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+    <ion-slide>
+      <img src="assets/img/wireme-intro-1.jpg"  style="width: 100%;height: 100%" />
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/wireme-intro-2.jpg" style="width: 100%;height: 100%" />
+    <div style="position: fixed;z-index: 1;margin-top: -45px;margin-left:323px;color: #fff" (click)="startApp()">
+         Next &nbsp;<ion-icon name="arrow-forward"  ></ion-icon>
+       </div>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

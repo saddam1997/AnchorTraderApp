@@ -1,0 +1,43 @@
+[{
+	"sender":"pankajjoshi115@gmail.com",
+	"receiver":"Kasif@gmail.com",
+	"traderName":"kasif Kazmi",
+	"isAccepted":false,	
+	"chatId":"1"
+},
+{
+	"sender":"pankajjoshi115@gmail.com",
+	"receiver":"Sikha@gmail.com",
+     "traderName":"sikha",
+     "isAccepted":false,	 
+	 "chatId":"2"
+},
+{
+	"sender":"pankajjoshi115@gmail.com",
+	"receiver":"Subham@gmail.com",
+	"traderName":"subham Gupta",
+	"isAccepted":true,	
+	"chatId":"3"
+},
+{
+	"sender":"pankajjoshi115@gmail.com",
+	"receiver":"Saddam@gmail.com",
+	"traderName":"saddam Husen",
+	"isAccepted":true,	
+	"chatId":"4"
+},
+{
+	"sender":"pankajjoshi115@gmail.com",
+	"receiver":"Ankit@gmail.com",
+	"traderName":"ankit singh",
+	"isAccepted":true,	
+	"chatId":"5"
+},
+{
+	"sender":"pankajjoshi115@gmail.com",
+	"receiver":"Ram@gmail.com",
+	"traderName":"ram Singh",
+	"isAccepted":true,	
+	"chatId":"6"
+}
+]
