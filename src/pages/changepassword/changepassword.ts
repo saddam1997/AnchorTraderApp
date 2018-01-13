@@ -30,9 +30,9 @@ submitted = false;
   }
 
   changecurrentPassword(form: NgForm){  
-    alert("this.newPasswordvalue "+this.newPasswordvalue.userMailId);
-        alert("this.newPasswordvalue "+this.newPasswordvalue.newPassword);
-            alert("this.newPasswordvalue "+this.newPasswordvalue.confirmNewPassword);
+    // alert("this.newPasswordvalue "+this.newPasswordvalue.userMailId);
+    //     alert("this.newPasswordvalue "+this.newPasswordvalue.newPassword);
+    //         alert("this.newPasswordvalue "+this.newPasswordvalue.confirmNewPassword);
   	this.submitted = true; 
   	 if (form.valid) {  
    let loading = this.loadingCtrl.create({

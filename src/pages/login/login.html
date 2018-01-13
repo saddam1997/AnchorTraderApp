@@ -5,8 +5,8 @@
 		<img src="assets/img/wireme-logo.png" alt="Ionic logo" class="brand-logo">
 	</div>
 	<ion-row class="logo" text-center>
-		 <ion-col col-12 style="    font-size: 2em;    margin-top: 38px;    color: #3896ea;"><ion-icon name="contact" class="icon-chat-user"></ion-icon></ion-col>
-		 <ion-col col-12><h3 style="color: #3896ea;"><strong>Sign In</strong></h3></ion-col>
+		 <ion-col col-12 style="    font-size: 2em;    margin-top: 38px;    color: #3896ea;" ><ion-icon name="contact" class="icon-chat-user"></ion-icon></ion-col>
+		 <ion-col col-12><h3 class="button-color"><strong>Sign In</strong></h3></ion-col>
 	</ion-row>
 	<form #loginForm="ngForm" novalidate>
 		<ion-list no-lines class="form-input-fields">
@@ -33,13 +33,13 @@
 			</ion-row>
 			<ion-row responsive-sm>
 				<ion-col >
-					<button style="background-color: #3996ea;" ion-button (click)="onlogin1(loginForm)" type="submit" block>Login</button>
+					<button class="button-backcolor" ion-button (click)="onlogin1(loginForm)" type="submit" block>Login</button>
 				</ion-col>
 			</ion-row>
 			<hr>
 			<ion-row>
 				<ion-col text-center  style="font-size: 0.8em; color: #bdbdbd;">
-					Not a member? <a (click)="onSignup()">Create an account</a>
+					Not a member? <a class="button-color" (click)="onSignup()">Create an account</a>
 				</ion-col>
 			</ion-row>
 		</ion-list>

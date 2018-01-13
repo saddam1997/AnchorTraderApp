@@ -45,7 +45,7 @@
 }
 .outer-content .scroll-content{
   margin-top: 150px !important;
-      background: #0c83ce;
+      background: #351c20 !important;
 }
 .toolbar-background{
     background: #3b4354 !important;
@@ -84,4 +84,12 @@ margin-right: auto;
 }
 .padding0{
   padding: 0 !important;
+}
+.button-color{
+  color: #351c20 !important;
+  background-color: #351c20 !important;
+}
+
+.menue-contentbackground{
+  background:  #351c20 !important;
 }

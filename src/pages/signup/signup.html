@@ -6,7 +6,7 @@
 	</div>
 	<ion-row class="logo" text-center>
 		 <ion-col col-12 style="    font-size: 2em;    margin-top: 38px;    color: #3896ea;"><ion-icon name="create" class="icon-chat-user"></ion-icon></ion-col>
-		 <ion-col col-12><h3 style="color: #3896ea;"><strong>Create Account</strong></h3></ion-col>
+		 <ion-col col-12><h3 class="button-color" ><strong>Create Account</strong></h3></ion-col>
 	</ion-row>
 	<form #signupForm="ngForm" novalidate>
 		<ion-list no-lines class="form-input-fields">
@@ -67,13 +67,13 @@
 
 			<ion-row responsive-sm>
 				<ion-col >
-					<button style="    background-color: #3996ea;" ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button>
+					<button class="button-backcolor"  ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button>
 				</ion-col>
 			</ion-row>
 			<hr>
 			<ion-row>
 				<ion-col text-center  style="font-size: 0.8em; color: #bdbdbd;">
-					Already a member? <a (click)="onLogin()">Login</a>
+					Already a member? <a class="button-color" (click)="onLogin()">Login</a>
 				</ion-col>
 			</ion-row>
 		</ion-list>

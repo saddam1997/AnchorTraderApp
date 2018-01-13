@@ -39,7 +39,7 @@ export class ConferenceApp {
   loggedInPages: PageInterface[] = [
     { title: 'Home', name: 'DashboardPage', component: DashboardPage, icon: 'home' },
     { title: 'Chat', name: 'ChatuserlistPage', component: ChatuserlistPage, icon: 'chatbubbles' },
-    { title: 'Setting', name: 'SettingPage', component: SettingPage, icon: 'settings' },
+    //{ title: 'Setting', name: 'SettingPage', component: SettingPage, icon: 'settings' },
     { title: 'Logout', name: null, component: null, icon: 'log-out',logsOut: true }
    
   ];

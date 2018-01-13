@@ -8,6 +8,7 @@ import { SignupPage } from '../signup/signup';
 import { ChangepasswordPage } from '../changepassword/changepassword';
 import { DashboardPage } from '../dashboard/dashboard';
 import { SetupService } from '../../providers/setup.services';
+
 @Component({
   selector: 'page-user',
   templateUrl: 'login.html'
@@ -21,6 +22,7 @@ export class LoginPage {
   public userName:any;
 constructor(public userData: UserData,public navCtrl: NavController,public toastCtrl: ToastController,public events: Events,public menuCtrl: MenuController, public navParams: NavParams,public _setupService: SetupService,public loadingCtrl: LoadingController) {
 this.setCurrentPosition();
+
   }
  public setCurrentPosition() {
       if ("geolocation" in navigator) {
@@ -70,7 +72,7 @@ onlogin1(form: NgForm){
      // enable the root left menu when leaving the tutorial page
     this.menuCtrl.enable(true);
   }
-  onlogin12(form: NgForm) {   
+  onlogin11(form: NgForm) {   
     this.submitted = true; 
     if (form.valid) {  
       this.userData.login(this.login.username);  

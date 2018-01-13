@@ -32,16 +32,16 @@
 
 <div *ngFor="let friend of friendList" class="row chat-all">
 	<div class="col-12" *ngIf="friend.isAccepted === true">
-		 <span class="chat-user" (click)="openChat(friend.sender,friend.receiver,friend.chatId)">{{friend.receiver}}</span>
+		 <span class="chat-user" (click)="openChat(friend.sender,friend.recipient,friend.chatId)">{{friend.sender}}</span>
   </div>&nbsp;
 	  <div *ngIf="friend.isAccepted === false"  class="row ">
 	  	<div class="col-sm-9">
-	     	<span class="chat-user">{{friend.receiver}}</span>
+	     	<span class="chat-user">{{friend.sender}}</span>
 	  	</div>
-			 	<div class="col col-6"><button style="background-color: #3996ea;" ion-button  type="submit"  (click)="acceptRequestByTrader()" block>Accept</button>
+			 	<div class="col col-6"><button class="button-backcolor" ion-button  type="submit"  (click)="acceptRequestByTrader(friend.chatId)" block>Accept</button>
 			 	</div>
 			 	<div  class="col col-6">
-			 	 <button style="background-color: #3996ea;" ion-button  type="submit" (click)="rejectRequestByTrader()"  block>Reject</button></div>
+			 	 <button class="button-backcolor"  ion-button  type="submit" (click)="rejectRequestByTrader(friend.chatId)"  block>Reject</button></div>
 	
 	</div>
 </div>

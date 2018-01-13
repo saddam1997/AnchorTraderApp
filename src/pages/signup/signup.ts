@@ -23,7 +23,6 @@ export class SignupPage {
 
   onSignup(form: NgForm) {
     this.submitted = true;
-
     if (form.valid){
        this.userData.signup(this.signup1.username);
         let loading = this.loadingCtrl.create({

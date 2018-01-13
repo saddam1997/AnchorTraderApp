@@ -47,8 +47,11 @@ this.getFriendList();
   }
 
   getFriendList(){
-     this._setupService.getfrienlist1().subscribe((response) => {
-      let sortData = response.sort(function(a, b){       
+     this._setupService.getfrienlist1({email:this.UserId.email}).subscribe((response) => {
+       //debugger;
+      // console.log("response = = "+JSON.stringify(response));
+       if(response.data.length>0){
+         let sortData = response.data.sort(function(a, b){       
           var keyA = a.isAccepted,
               keyB = b.isAccepted;
           // Compare the 2 dates
@@ -56,7 +59,10 @@ this.getFriendList();
           if(keyA > keyB) return 1;
           return 0;
       });
-          this.friendList=sortData;  
+          this.friendList=sortData; 
+          console.log("this.friendList = = "+JSON.stringify(this.friendList)); 
+       }
+      
       });
   }
 
@@ -69,9 +75,9 @@ this.getFriendList();
 
    openChat(senderEmail,receiverEmail,chatId){  
    // alert("senderEmail = = "+senderEmail);  
-   // alert("receiverEmail = = "+receiverEmail);
+   console.log("receiverEmail = = "+receiverEmail);
    // alert("chatId = = "+chatId);    
-         this.navCtrl.push(ChatroomPage, { sender: senderEmail, receiver: receiverEmail,chatId:chatId});    
+         this.navCtrl.push(ChatroomPage, { sender: receiverEmail, receiver: senderEmail,chatId:chatId});    
   }
   
   joinChat() {
@@ -98,10 +104,9 @@ this.getFriendList();
 
   
   //Kunvar singh ---Date : 8th Jan, 2018
-  acceptRequestByTrader() {
-    this.isAccept.isAccepted=true;
+  acceptRequestByTrader(chatId : any) {
     let accept = true;
-    this._setupService.acceptRequest(this.isAccept.isAccepted).subscribe((response) => { 
+    this._setupService.acceptRequest({isAccepted : accept,chatId : chatId}).subscribe((response) => { 
       if(response){
         this.getFriendList();
       }
@@ -109,9 +114,9 @@ this.getFriendList();
 
   }
 
-  rejectRequestByTrader() {
-    this.isAccept.isAccepted=false;
-    this._setupService.rejectRequest(this.isAccept.isAccepted).subscribe((response) => { 
+  rejectRequestByTrader(chatId : any) {
+     let reject = true;
+    this._setupService.rejectRequest( {isRejected  : reject, chatId : chatId}).subscribe((response) => { 
       if(response){
          this.getFriendList();
       }

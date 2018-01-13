@@ -15,10 +15,8 @@ export class SetupService {
     this.http = http;    
     console.log('Hello ServicesProvider Provider');
   }
-    //endpoint_url: string = 'http://192.168.0.108:1338';
-    // endpoint_url: string = 'http://192.168.1.32:1338';
-     endpoint_url: string = 'http://192.168.0.120:1338';
-
+    
+    endpoint_url: string = 'http://198.187.28.200:3000';
    //create new user account
     createUserAccount(SignUpDetail: any) {      
         var response = this.http.post(this.endpoint_url + '/trader/createNewTrader',SignUpDetail ).map(res => res.json());
@@ -27,14 +25,16 @@ export class SetupService {
 
      // verify email
      VerificationEmail(otpDetail: any) {      
+       console.log("otpDetail =- = "+JSON.stringify(otpDetail));
         var response = this.http.post(this.endpoint_url + '/trader/verifyEmailAddress',otpDetail ).map(res => res.json());
         return response;
     }
     
     
     //sent Otp To Email Verificatation
-     EmailVerifyforAccount(values:any){
-          var response =this.http.post(this.endpoint_url +'/user/sentOtpToEmailVerificatation',values).map(res =>res.json());
+     EmailVerifyforAccount(email:any){
+       console.log("email = = "+JSON.stringify(email));
+          var response =this.http.post(this.endpoint_url +'/trader/sentOtpToEmailVerificatation',email).map(res =>res.json());
           return response;
        } 
 
@@ -46,7 +46,7 @@ export class SetupService {
 
    // update current passeword
     changecurrentpasswords(values:any){
-     var response =this.http.post(this.endpoint_url +'/user/updateCurrentPassword',values).map(res =>res.json());
+     var response =this.http.post(this.endpoint_url +'/trader/updateCurrentPassword',values).map(res =>res.json());
       return response;
     }
 
@@ -100,17 +100,18 @@ export class SetupService {
        
 
        //get friends list
-        getfrienlist(emailId:any){
-         var response = this.http.post(this.endpoint_url +'/chat/getUserFriends',emailId).map(res => res.json());
+        getfrienlist1(emailId:any){
+          console.log("email = = "+JSON.stringify(emailId));
+         var response = this.http.post(this.endpoint_url +'/chat/getTradersForUser',emailId).map(res => res.json());
          return response;
         }
 
       
         // get hard code frienlist 
-        getfrienlist1(){
-         var response = this.http.get('assets/data/friendList.json').map(res => res.json());
-         return response;
-        } 
+        // getfrienlist1(){
+        //  var response = this.http.get('assets/data/friendList.json').map(res => res.json());
+        //  return response;
+        // } 
         
 
 
@@ -148,13 +149,13 @@ export class SetupService {
       }
       
 
-       acceptRequest(isAccepted: any){
-         var response =this.http.post(this.endpoint_url +'/chat/updateAcceptance',isAccepted).map(res =>res.json());
+       acceptRequest(data: any){
+         var response =this.http.post(this.endpoint_url +'/chat/updateAcceptance',data).map(res =>res.json());
          return response;
        }
 
-       rejectRequest(isAccepted: any){
-         var response =this.http.post(this.endpoint_url +'/chat/updateAcceptance',isAccepted).map(res =>res.json());
+       rejectRequest(data: any){
+         var response =this.http.post(this.endpoint_url +'/chat/updateAcceptance',data).map(res =>res.json());
          return response;
        }
      

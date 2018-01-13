@@ -21,12 +21,12 @@
   <ion-label>
   	<ion-row style="border:1px">  
     <ion-col col-6>
-    		cex.io
+    		<b><span class="button-color">cex.io</span></b>
     </ion-col>
      <ion-col col-6>{{cexdata}}</ion-col>
   </ion-row>
   <ion-row>
-    <ion-col col-6>zebpay</ion-col>
+    <ion-col col-6><b><span class="button-color">zebpay</span></b></ion-col>
      <ion-col col-6>{{zebPayData}}</ion-col>
   </ion-row>
 </ion-label>  
@@ -34,24 +34,12 @@
 
    <ion-row class="logo" text-center>
          <br>
-		 <ion-col col-12><h3 style="color: #3896ea;margin-top: 57px"><strong>Update</strong></h3></ion-col>
+		 <ion-col col-12><h3 class="button-color" style="margin-top: 57px"><strong>Update</strong></h3></ion-col>
 	</ion-row>
-
-<!-- <ion-list>
-  <ion-item>
-    <ion-label><h3 style="color: #3896ea;margin-top: 5px"><strong>BTC</strong></h3></ion-label>     
-    <ion-select [(ngModel)]="selectedLeave">
-        <ion-option value="CASUAL LEAVE">Casual Leave</ion-option>
-        <ion-option value="COMP OFF">Comp Off</ion-option>
-        <ion-option value="EARNED LEAVE">Earned Leave</ion-option>
-        <ion-option value="SICK LEAVE">Sick Leave</ion-option>
-    </ion-select>
-  </ion-item>
-</ion-list> -->
 
 	<form #btcForm="ngForm" novalidate>
 		<ion-grid>
-			<ion-row> <h3 style="color: #3896ea;margin-top: 5px"><strong>BTC</strong></h3></ion-row>
+			<ion-row> <h3 class="button-color" style="margin-top: 5px"><strong>BTC</strong></h3></ion-row>
           <ion-row no-lines class="form-input-fields">
             <ion-col col-4>
 	        <ion-input [(ngModel)]="btcValue.buyRate"  placeholder="buy"name="buyRate" type="text" #buyRate="ngModel" spellcheck="false" autocapitalize="off" class="login-input" >
@@ -68,7 +56,7 @@
          </ion-row>
         <ion-row responsive-sm>
 				<ion-col >
-					<button style="    background-color: #3996ea;margin-top: 14px" ion-button (click)="updateBTC(btcForm)" type="submit" block>update</button>
+					<button class="button-backcolor" style="margin-top: 14px" ion-button (click)="updateBTC(btcForm)" type="submit" block>update</button>
 				</ion-col>
 			</ion-row>
 			<br><br>
@@ -78,7 +66,7 @@
 
 		<form #inrForm="ngForm" novalidate>
 			    <ion-grid>
-         <ion-row> <ion-row> <h3 style="color: #3896ea;margin-top: 5px"><strong>INRW</strong></h3></ion-row></ion-row>
+         <ion-row> <ion-row> <h3 class="button-color" style="margin-top: 5px"><strong>INRW</strong></h3></ion-row></ion-row>
           <ion-row no-lines class="form-input-fields">
             <ion-col col-4>
 	        <ion-input [(ngModel)]="inrValue.buyRate"  placeholder="buy"name="buyRate" type="text" #buyRate="ngModel" spellcheck="false" autocapitalize="off" class="login-input" >
@@ -95,7 +83,7 @@
          </ion-row>
        <ion-row responsive-sm>
 				<ion-col >
-					<button style="    background-color: #3996ea;margin-top: 14px" ion-button (click)="updateINR(inrForm)" type="submit" block>update</button>
+					<button class="button-backcolor" style="margin-top: 14px" ion-button (click)="updateINR(inrForm)" type="submit" block>update</button>
 				</ion-col>
 			</ion-row>
       </ion-grid>

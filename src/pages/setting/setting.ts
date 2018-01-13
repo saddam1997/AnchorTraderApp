@@ -17,14 +17,14 @@ import { SetupService } from '../../providers/setup.services';
 })
 export class SettingPage {
 	public user:any;
-  public verifyEmail:boolean;	 
+  public verifyEmail:boolean=false;	 
        userEmail: UserEmailId = { email: ''};
        passwordValue = {"userMailId": "","currentPassword": "","newPassword": "", "confirmNewPassword": "" };
-       otpvalues =     { "userMailId": "",  "otp": "" };
+       otpvalues =     { "email": "",  "otp": "" };
        constructor(public navCtrl: NavController,public alertCtrl: AlertController,public toastCtrl: ToastController,public _setupService: SetupService,public loadingCtrl: LoadingController) 
        {
           this.userdata();     
-          this.verifyEmail=false;        
+          //this.verifyEmail=false;        
        }
 
        userdata(){      
@@ -147,17 +147,18 @@ export class SettingPage {
            content: 'verifying OtP...'
         });
             loading.present();
-            this.otpvalues.userMailId= this.userEmail.email
+            this.otpvalues.email= this.userEmail.email
             this.otpvalues.otp=data.otp;                                
             this._setupService.VerificationEmail(this.otpvalues).subscribe((response) => {
-               if(response.statusCode== 200){
-                 this.navCtrl.setRoot(DashboardPage);
+              console.log("RES = = "+JSON.stringify(response));
+               if(response.statusCode== 200){                
                  loading.dismiss();
                  localStorage.setItem('logindetail',JSON.stringify(response));
-                this.user=JSON.parse(localStorage.getItem('logindetail'));
+                 this.user=JSON.parse(localStorage.getItem('logindetail'));
+                 console.log("this.user.trader.email"+response.trader.email);
+                   console.log("this.user.trader.verifyEmail"+response.trader.verifyEmail);
                  this.userEmail.email=this.user.trader.email;
-                this.verifyEmail=this.user.trader.verifyEmail;
-                this.verifyEmail=true;
+                 this.verifyEmail=this.user.trader.verifyEmail;
                  let toast = this.toastCtrl.create({
                      message: 'verify email successfully !!',
                      showCloseButton: true,
@@ -165,6 +166,7 @@ export class SettingPage {
                      duration: 5000
                 });
                 toast.present();
+                 this.navCtrl.setRoot(DashboardPage);
                 }    
                  else{
                    loading.dismiss();
