@@ -42,7 +42,8 @@ UserId: UserEmailId = { email: '' };
         backAction();
       },2)
 
-   this.io.sails.url = 'http://198.187.28.200:3000';     // connect to socket  
+   //this.io.sails.url = 'http://198.187.28.200:3000';     // connect to socket  
+    this.io.sails.url = 'http://192.168.1.20:3000';     // connect to socket  
     var ngZ = this.ngZone;
      var event=this.events;
 

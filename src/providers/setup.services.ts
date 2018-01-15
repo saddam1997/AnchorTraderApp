@@ -16,7 +16,8 @@ export class SetupService {
     console.log('Hello ServicesProvider Provider');
   }
     
-    endpoint_url: string = 'http://198.187.28.200:3000';
+   // endpoint_url: string = 'http://198.187.28.200:3000';
+     endpoint_url: string = 'http://192.168.1.20:3000';
    //create new user account
     createUserAccount(SignUpDetail: any) {      
         var response = this.http.post(this.endpoint_url + '/trader/createNewTrader',SignUpDetail ).map(res => res.json());
