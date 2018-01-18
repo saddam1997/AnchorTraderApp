@@ -22,11 +22,11 @@
 
     <ion-list inset>   	 
           
-          <span style="margin-right: 259px !important;" > Account verify</span>
+          <span style="margin-right: 259px !important;" > <strong>Account verify</strong></span>
           <br>{{userEmail.email}}
           <span (click)="veryfyEmail(userEmail.email)" class="pull-left red-text" *ngIf="verifyEmail==false"> Not Verified</span>
           <span class="pull-right green-text" *ngIf="verifyEmail==true"> Verified</span><hr>        
-          <button ion-item (click)="changeCurrentPassword()">Change Password</button><hr>  
+          <button ion-item (click)="changeCurrentPassword()">Change Password</button><hr> 
  
     </ion-list>
   </div>

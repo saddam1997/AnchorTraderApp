@@ -5,7 +5,6 @@ import { UserData } from '../../providers/user-data';
 import { UserOptions,LoginDetail } from '../../interfaces/user-options';
 import { ForgotpasswordPage } from '../forgotpassword/forgotpassword';
 import { SignupPage } from '../signup/signup';
-import { ChangepasswordPage } from '../changepassword/changepassword';
 import { DashboardPage } from '../dashboard/dashboard';
 import { SetupService } from '../../providers/setup.services';
 
@@ -42,8 +41,7 @@ onlogin1(form: NgForm){
         loading.present();
        this._setupService.createLoginDetail(this.loginDetail).subscribe((result) => { 
           if(result.statusCode== 200){
-            this.responseData = result;
-             console.log("res = = "+JSON.stringify(this.responseData));
+            this.responseData = result;             
              localStorage.setItem('logindetail',JSON.stringify(this.responseData));
               this.user=JSON.parse(localStorage.getItem('logindetail'));   
               this.userName=this.responseData.trader.email; 

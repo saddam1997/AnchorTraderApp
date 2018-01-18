@@ -35,26 +35,17 @@ export class ChatuserlistPage {
         this.navCtrl.pop();
         backAction();
       },2)
-     this.userdata();
-     // this._setupService.getfrienlist1(this.UserId.email).subscribe((response) => {
-     //    if(response.statusCode==200){
-     //      this.friendList=response.data; 
-     //      console.log("this.friendList = = "+JSON.stringify(this.friendList));      
-     //    }               
-     //  });
-this.getFriendList();
+     this.userdata();     
+     this.getFriendList();
      
   }
 
   getFriendList(){
-     this._setupService.getfrienlist1({email:this.UserId.email}).subscribe((response) => {
-       //debugger;
-      // console.log("response = = "+JSON.stringify(response));
+     this._setupService.getfrienlist({email:this.UserId.email}).subscribe((response) => {       
        if(response.data.length>0){
          let sortData = response.data.sort(function(a, b){       
           var keyA = a.isAccepted,
-              keyB = b.isAccepted;
-          // Compare the 2 dates
+              keyB = b.isAccepted;          
           if(keyA < keyB) return -1;
           if(keyA > keyB) return 1;
           return 0;
@@ -73,10 +64,8 @@ this.getFriendList();
       }
     }
 
-   openChat(senderEmail,receiverEmail,chatId){  
-   // alert("senderEmail = = "+senderEmail);  
-   console.log("receiverEmail = = "+receiverEmail);
-   // alert("chatId = = "+chatId);    
+   openChat(senderEmail,receiverEmail,chatId){     
+   console.log("receiverEmail = = "+receiverEmail);    
          this.navCtrl.push(ChatroomPage, { sender: receiverEmail, receiver: senderEmail,chatId:chatId});    
   }
   
@@ -94,8 +83,7 @@ this.getFriendList();
        this.geolocation.getCurrentPosition(options).then((response) => {
        this.latitude =response.coords.latitude;         
        this.longitude =response.coords.longitude;     
-      this.zoom = 16;      
-
+      this.zoom = 16;   
        }).catch((error) => {   
      });
    });  

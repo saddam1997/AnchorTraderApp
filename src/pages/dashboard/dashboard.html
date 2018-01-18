@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-  	<button ion-button menuToggle>
+    <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Dashboard</ion-title>
@@ -17,16 +17,16 @@
 
 
 <ion-content padding>
-	<ion-item>
+  <ion-item>
   <ion-label>
-  	<ion-row style="border:1px">  
+    <ion-row style="border:1px">  
     <ion-col col-6>
-    		<b><span class="button-color">cex.io</span></b>
+        <b><span class="text_Color">cex.io</span></b>
     </ion-col>
      <ion-col col-6>{{cexdata}}</ion-col>
   </ion-row>
   <ion-row>
-    <ion-col col-6><b><span class="button-color">zebpay</span></b></ion-col>
+    <ion-col col-6><b><span class="text_Color">zebpay</span></b></ion-col>
      <ion-col col-6>{{zebPayData}}</ion-col>
   </ion-row>
 </ion-label>  
@@ -34,61 +34,61 @@
 
    <ion-row class="logo" text-center>
          <br>
-		 <ion-col col-12><h3 class="button-color" style="margin-top: 57px"><strong>Update</strong></h3></ion-col>
-	</ion-row>
+     <ion-col col-12><h3 class="text_Color" style="margin-top: 57px"><strong>Update</strong></h3></ion-col>
+  </ion-row>
 
-	<form #btcForm="ngForm" novalidate>
-		<ion-grid>
-			<ion-row> <h3 class="button-color" style="margin-top: 5px"><strong>BTC</strong></h3></ion-row>
+  <form #btcForm="ngForm" novalidate>
+    <ion-grid>
+      <ion-row> <h3 class="text_Color" style="margin-top: 5px"><strong>BTC</strong></h3></ion-row>
           <ion-row no-lines class="form-input-fields">
             <ion-col col-4>
-	        <ion-input [(ngModel)]="btcValue.buyRate"  placeholder="buy"name="buyRate" type="text" #buyRate="ngModel" spellcheck="false" autocapitalize="off" class="login-input" >
-				</ion-input>
+          <ion-input [(ngModel)]="btcValue.buyRate"  placeholder="buy" name="buyRate" type="text" #buyRate="ngModel" spellcheck="false" autocapitalize="off" class="login-input" >
+        </ion-input>
             </ion-col>
             <ion-col col-4>
-	       <ion-input [(ngModel)]="btcValue.sellRate" placeholder="sell" name="sellRate" type="text" #sellRate="ngModel"  class="login-input" >
-				</ion-input>
+         <ion-input [(ngModel)]="btcValue.sellRate" placeholder="sell" name="sellRate" type="text" #sellRate="ngModel"  class="login-input" >
+        </ion-input>
             </ion-col>
             <ion-col col-4>
-	        	<ion-input [(ngModel)]="btcValue.volume" placeholder="volume" name="volume" type="text" #volume="ngModel"  class="login-input" >
-				</ion-input>
+            <ion-input [(ngModel)]="btcValue.volume" placeholder="volume" name="volume" type="text" #volume="ngModel"  class="login-input" >
+        </ion-input>
             </ion-col>
          </ion-row>
         <ion-row responsive-sm>
-				<ion-col >
-					<button class="button-backcolor" style="margin-top: 14px" ion-button (click)="updateBTC(btcForm)" type="submit" block>update</button>
-				</ion-col>
-			</ion-row>
-			<br><br>
-		</ion-grid>
-	</form>
+        <ion-col >
+          <button class="button-backcolor" style="margin-top: 14px" ion-button (click)="updateBTC(btcForm)" type="submit" block>update</button>
+        </ion-col>
+      </ion-row>
+      <br><br>
+    </ion-grid>
+  </form>
 
 
-		<form #inrForm="ngForm" novalidate>
-			    <ion-grid>
-         <ion-row> <ion-row> <h3 class="button-color" style="margin-top: 5px"><strong>INRW</strong></h3></ion-row></ion-row>
+    <form #inrForm="ngForm" novalidate>
+          <ion-grid>
+         <ion-row> <ion-row> <h3 class="text_Color" style="margin-top: 5px"><strong>INRW</strong></h3></ion-row></ion-row>
           <ion-row no-lines class="form-input-fields">
             <ion-col col-4>
-	        <ion-input [(ngModel)]="inrValue.buyRate"  placeholder="buy"name="buyRate" type="text" #buyRate="ngModel" spellcheck="false" autocapitalize="off" class="login-input" >
-				</ion-input>
+          <ion-input [(ngModel)]="inrValue.buyRate"  placeholder="buy"name="buyRate" type="text" #buyRate="ngModel" spellcheck="false" autocapitalize="off" class="login-input" >
+        </ion-input>
             </ion-col>
             <ion-col col-4>
-	       <ion-input [(ngModel)]="inrValue.sellRate" placeholder="sell" name="sellRate" type="text" #sellRate="ngModel"  class="login-input" >
-				</ion-input>
+         <ion-input [(ngModel)]="inrValue.sellRate" placeholder="sell" name="sellRate" type="text" #sellRate="ngModel"  class="login-input" >
+        </ion-input>
             </ion-col>
             <ion-col col-4>
-	        	<ion-input [(ngModel)]="inrValue.volume" placeholder="volume" name="volume" type="text" #volume="ngModel"  class="login-input" >
-				</ion-input>
+            <ion-input [(ngModel)]="inrValue.volume" placeholder="volume" name="volume" type="text" #volume="ngModel"  class="login-input" >
+        </ion-input>
             </ion-col>
          </ion-row>
        <ion-row responsive-sm>
-				<ion-col >
-					<button class="button-backcolor" style="margin-top: 14px" ion-button (click)="updateINR(inrForm)" type="submit" block>update</button>
-				</ion-col>
-			</ion-row>
+        <ion-col >
+          <button class="button-backcolor" style="margin-top: 14px" ion-button (click)="updateINR(inrForm)" type="submit" block>update</button>
+        </ion-col>
+      </ion-row>
       </ion-grid>
-		
+    
 
 
-	</form>
+  </form>
 </ion-content>

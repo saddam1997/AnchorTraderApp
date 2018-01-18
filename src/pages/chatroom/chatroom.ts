@@ -1,9 +1,9 @@
-import { Component, ElementRef,  NgZone, OnInit, ViewChild } from '@angular/core';
-import {  IonicPage, NavParams, ToastController,Platform,NavController,Events } from 'ionic-angular';
+import { Component,   NgZone,   } from '@angular/core';
+import {  IonicPage, NavParams, Platform,NavController,Events } from 'ionic-angular';
 import { SendMessageWithContent } from '../../interfaces/user-options';
 import { SetupService } from '../../providers/setup.services'; 
 import   *as socketIOClient  from 'socket.io-client';
-import *as sailsIOClient  from 'sails.io.js';
+import  *as sailsIOClient  from 'sails.io.js';
 import { UserEmailId } from '../../interfaces/user-options';
 
 @IonicPage()
@@ -12,7 +12,7 @@ import { UserEmailId } from '../../interfaces/user-options';
   templateUrl: 'chatroom.html',
 })
 export class ChatroomPage {   
-    nickname = '';
+  nickname = '';
   chatId = '';
   data:any; 
   user:any;
@@ -27,7 +27,13 @@ UserId: UserEmailId = { email: '' };
   }
 
   myInfo = this.messages[0];
-  constructor(private ngZone: NgZone,public events: Events, public platform:Platform,private navCtrl:NavController,private navParams: NavParams, public _setupService: SetupService, private toastCtrl: ToastController) {
+  constructor(private ngZone: NgZone,public events: Events, public platform:Platform,private navCtrl:NavController,private navParams: NavParams, public _setupService: SetupService) {
+ 
+   // debugger;  
+
+  // this.io.sails.url = this._setupService.endpoint_url;
+this.io.sails.url = "http://198.187.28.200:3000"; 
+
        this.userdata();
 
     this.messageDetails.sender=this.UserId.email;  
@@ -41,9 +47,7 @@ UserId: UserEmailId = { email: '' };
         this.navCtrl.pop();
         backAction();
       },2)
-
-   //this.io.sails.url = 'http://198.187.28.200:3000';     // connect to socket  
-    this.io.sails.url = 'http://192.168.1.20:3000';     // connect to socket  
+  
     var ngZ = this.ngZone;
      var event=this.events;
 
@@ -112,8 +116,4 @@ sendMessage() {
   }
 
 
-}
-
-class ContactInfo {
-  constructor(public description: string) {}
 }

@@ -1,11 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { NavController, NavParams,MenuController,ToastController,LoadingController,Events,Slides} from 'ionic-angular';
 import { UserData } from '../../providers/user-data';
 import { UserOptions,LoginDetail } from '../../interfaces/user-options';
 import { ForgotpasswordPage } from '../forgotpassword/forgotpassword';
 import { SignupPage } from '../signup/signup';
-import { ChangepasswordPage } from '../changepassword/changepassword';
 import { SetupService } from '../../providers/setup.services';
 import { Storage } from '@ionic/storage';
 import { LoginPage } from '../../pages/login/login';

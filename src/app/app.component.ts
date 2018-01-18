@@ -7,7 +7,6 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { ChatuserlistPage } from '../pages/chatuserlist/chatuserlist';
-import { ChatroomPage} from '../pages/chatroom/chatroom';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { SettingPage } from '../pages/setting/setting';
 import { ConferenceData } from '../providers/conference-data';
@@ -29,6 +28,7 @@ export interface PageInterface {
   templateUrl: 'app.template.html'
 })
 export class ConferenceApp {
+ 
    emailId?:any;
    userEmail?:any;
   // the root nav is a child of the root app component
@@ -39,7 +39,7 @@ export class ConferenceApp {
   loggedInPages: PageInterface[] = [
     { title: 'Home', name: 'DashboardPage', component: DashboardPage, icon: 'home' },
     { title: 'Chat', name: 'ChatuserlistPage', component: ChatuserlistPage, icon: 'chatbubbles' },
-    //{ title: 'Setting', name: 'SettingPage', component: SettingPage, icon: 'settings' },
+    { title: 'Setting', name: 'SettingPage', component: SettingPage, icon: 'settings' },
     { title: 'Logout', name: null, component: null, icon: 'log-out',logsOut: true }
    
   ];
@@ -61,6 +61,7 @@ export class ConferenceApp {
     public statusBar: StatusBar,
     public loadingCtrl: LoadingController
   ) {
+    // this.io.sails.url = "http://198.187.28.200:3000";
    this.registerBackButtonAction();
     // Check if the user has already seen the tutorial
     this.storage.get('hasSeenTutorial')
@@ -94,7 +95,7 @@ export class ConferenceApp {
     this.platform.registerBackButtonAction(() => { 
                 let nav = this.app.getActiveNavs()[0];
                 let activeView = nav.getActive();
-                if(activeView.name === "GmapPage") { 
+                if(activeView.name === "DashboardPage") { 
                     if (nav.canGoBack()){ //Can we go back?
                         nav.pop();
                     } else {
@@ -157,8 +158,8 @@ export class ConferenceApp {
       
     }
   }
-   welcomeToBack(){    
-     this.nav.setRoot(LoginPage);
+   welcomeToBack(){     
+   this.nav.setRoot(LoginPage);
    }
 
   // openTutorial() {

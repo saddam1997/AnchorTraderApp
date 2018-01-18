@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController,ToastController,AlertController } from 'ionic-angular';
-import { PasswordValues,UserEmailId } from '../../interfaces/user-options';
+import { UserEmailId } from '../../interfaces/user-options';
 import { DashboardPage } from '../dashboard/dashboard';
 import { SetupService } from '../../providers/setup.services'; 
 /**
@@ -187,5 +187,4 @@ export class SettingPage {
     prompt.present(); 
     });
   }
-
 }
